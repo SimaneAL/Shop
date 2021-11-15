@@ -7,10 +7,7 @@ public class Client extends Personne {
 		
 	}
 
-	public Client() {
-		super(null, null, null, null, null);
 
-	}
 
 
 	@Override

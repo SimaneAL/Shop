@@ -1,5 +1,6 @@
 package commandes;
 
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.Map;
 import magasins.Magasin;
@@ -15,17 +16,19 @@ public class Commande {
 	private Magasin magasin;
 	private double prixTotal = 0.0;
 	private String dateCommande;
+	//private Date date;
 	private ModePaiement modePaiement;
 	private Map<Produit, Integer> produits;
 	
 	
 	
-	public Commande(Client client, Employe employe, Magasin magasin, String dateCommande, ModePaiement modePaiement) {
+	public Commande(Client client, Employe employe, Magasin magasin, ModePaiement modePaiement) {
 		super();
 		this.client = client;
 		this.employe = employe;
 		this.magasin = magasin;
-		this.dateCommande = dateCommande;
+		//ate = (Date) new java.util.Date();
+		this.dateCommande = Date.class.toString();
 		this.modePaiement = modePaiement;
 		this.produits = new HashMap<Produit, Integer>();
 	}

@@ -108,36 +108,43 @@ public class Magasin {
 		}
 		System.out.println("Votre caissier associe est : " +caissier.getPrenom()+", " +caissier.getNom().toUpperCase());
 		//creation de client
-		Client client = new Client();
+		
 		Scanner sc = new Scanner(System.in);
 
 		//infos personnelles
 		System.out.println("Quel est votre prenom ?");
-		String choixUser = sc.next();
-		if(choixUser!=null){
-			client.setPrenom(choixUser);
-		}
+		String prenom = sc.next();
 
+		
+	
+
+		String nom;
 		System.out.println("Quel est votre nom ?");
-		choixUser = sc.next();
-		if(choixUser!=null){
-			client.setNom(choixUser.toUpperCase());
-		}
+		nom = sc.next();
 
 		System.out.println("Quelle est votre adresse ?");
-		choixUser = sc.next();
-		if(choixUser!=null){
-			client.setAdresse(choixUser);
-		}
+		String adresse = sc.next();
 
 		System.out.println("Quel est votre code postal ?");
 		int code = sc.nextInt();
-		if(code>0){
-			client.setCodePostal(code);
-		}
 
-		Commande commande = new Commande(client, caissier, this);
+		System.out.println("Quelle est votre adresse mail?");
+		String dateNaiss =sc.next();
 
+		//if(prenom!=null && nom!=null && adresse!=null && code > 0){
+			Client client = new Client(nom, prenom, adresse, dateNaiss, code);
+			client.setNom(nom.toUpperCase());
+			Commande commande = new Commande(client, caissier, this, ModePaiement.espece);//espece par defaut
+
+		//}
+
+		
+		
+
+		
+		
+
+		
 		System.out.println("1 : acheter un produit \n 2: supprimer une quantite d un produit " +
 				"\n 3: supprimer totalement un produit \n 4: Afficher le prix total de votre commande et Exit");
 		int choixUs = sc.nextInt();
