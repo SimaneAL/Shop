@@ -1,5 +1,5 @@
 package commandes;
 
 public enum ModePaiement {
-	CB, Espece, cheque, virementBancaire;
+	CB, espece, cheque, virementBancaire;
 }

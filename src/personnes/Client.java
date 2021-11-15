@@ -7,6 +7,12 @@ public class Client extends Personne {
 		
 	}
 
+	public Client() {
+		super(null, null, null, null, null);
+
+	}
+
+
 	@Override
 	public String toString() {
 		return "Client [Nom=" + super.getNom() + ", Prenom=" + super.getPrenom() + ", Adresse=" + getAdresse()

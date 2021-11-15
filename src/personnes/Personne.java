@@ -5,13 +5,17 @@ public class Personne {
 	private int codePostal;
 	
 	
-	public Personne(String nom, String prenom, String adresse, String dateNaissance, int codePostal) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.adresse = adresse;
-		this.dateNaissance = dateNaissance;
-		this.codePostal = codePostal;
+	public Personne(String nom, String prenom, String adresse, String dateNaissance, Integer codePostal) {
+		try{
+			this.nom = nom;
+			this.prenom = prenom;
+			this.adresse = adresse;
+			this.dateNaissance = dateNaissance;
+			this.codePostal = codePostal;
+
+		} catch (Exception ignored){
+
+		}
 	}
 
 

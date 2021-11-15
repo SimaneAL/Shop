@@ -8,11 +8,15 @@ public  class Produit {
 	private double prixUnite;
 	
 	public Produit(String nom, double prixUnite) {
-		super();
+
 		this.nom = nom;
 		this.prixUnite = prixUnite;
-		this.id = this.incr;
-		this.incr++;
+		this.id = incr;
+		incr++;
+	}
+
+	public String getNom() {
+		return nom;
 	}
 
 	public int getId() {

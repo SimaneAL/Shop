@@ -1,5 +1,6 @@
 package commandes;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import magasins.Magasin;
@@ -8,48 +9,78 @@ import personnes.Employe;
 import rayons.Produit;
 
 public class Commande {
+
 	private int id;
 	private static int incr=1;
 	private Client client;
 	private Employe employe;
 	private Magasin magasin;
 	private double prixTotal = 0.0;
+	private Date date;
 	private String dateCommande;
 	private ModePaiement modePaiement;
 	private Map<Produit, Integer> produits;
 	
 	
 	
-	public Commande(Client client, Employe employe, Magasin magasin, String dateCommande, ModePaiement modePaiement) {
-		super();
+	public Commande(Client client, Employe employe, Magasin magasin, ModePaiement modePaiement) {
+		this.id = incr;
+		incr++;
 		this.client = client;
-		this.employe = employe;
+		this.employe = employe;//
 		this.magasin = magasin;
-		this.dateCommande = dateCommande;
-		this.modePaiement = modePaiement;
-		this.produits = new HashMap<Produit, Integer>();
+		this.dateCommande = this.date.toString();
+		this.modePaiement = modePaiement;//CB, cheque, espece....
+		this.produits = new HashMap<Produit, Integer>(); //cle => le produit
+				//valeur => la quantite de ce produit dans le magasin
 	}
 
+	public Commande(Client client, Employe employe, Magasin magasin) {
+		this.id = incr;
+		incr++;
+		this.client = client;
+		this.employe = employe;//
+		this.magasin = magasin;
+		this.dateCommande = this.date.toString();
+		this.produits = new HashMap<Produit, Integer>(); //cle => le produit
+		//valeur => la quantite de ce produit dans le magasin
+	}
 	
-//calculer prix total
+//calculer prix total de la compmande courante
 	public void calculerPrixTotal() {
 		double prixT = 0;
-		for (Map.Entry<Produit, Integer>  m : this.getProduits().entrySet()) {
-			
-	            prixT = prixT+  ((Produit) m.getKey()).getPrixUnite() *  (int) m.getValue() ;
+		for (Map.Entry<Produit, Integer>  m : this.getProduits().entrySet()) { //parcourir tous les produits du magasin afin de calculer le prix (produit qt et prix unite)
+	            prixT = prixT+  ((Produit) m.getKey()).getPrixUnite() *  (int) m.getValue() ; // somme (prixUnite * quantite) de tous les produits existants = prix total
 	           //System.out.println((int) m.getValue());
 	           //System.out.println("hum" +this.getPrixTotal() + (int) ((Produit) m.getKey()).getPrixUnite() * (int) m.getValue() );
 		}
-		this.setPrixTotal(prixT);
+		this.setPrixTotal(prixT);//modifer l'attribur prixTotal de la classe commande
 	}
 	
 //ajouter des produits + modification de prix total
 	public void ajoutProduit(Produit p, int quantite) {
-		this.produits.put(p, quantite);
-		this.calculerPrixTotal();
+
+		if(quantite <= 0 ){//si la qtt choisie est nÃ©gative on insere le mm prosuit or avec une qtt postive
+			System.out.println("Impossible, car la quantite choisie est negative !");
+			this.ajoutProduit(p, -quantite);//on prend l'opposÃ©
+		}
+		else{//verif si le produit existe deja dans la liste des prosuits ou pas
+			if(this.produits.containsKey(p)){//s il existe deja on augmente le stock
+				for (Map.Entry<Produit, Integer> m : this.getProduits().entrySet()) {
+					if(m.getKey().equals(p)){
+						m.setValue(m.getValue()+quantite);
+					}
+
+				}
+			}
+			else{//sinon on l ajoute dans la liste
+				this.produits.put(p, quantite);
+			}
+		}
+		this.calculerPrixTotal(); //ajout d'un/des produit(s) change le prix total automatiquement
 	}
 	
-//supp des produits + modification de prix total	
+//supp des unites de produits + modification de prix total
 	public void suppProduit(Produit p, int quantite) {
 		for (Map.Entry<Produit, Integer> m : this.getProduits().entrySet()) {
 			if(m.getKey().equals(p)){
@@ -58,7 +89,7 @@ public class Commande {
 					m.setValue((int) m.getValue() - quantite);
 				}
 				else {
-					System.out.println("Le nombre de produits choisi est négatif ou supérieur au stock");
+					System.out.println("Le nombre de produits choisi est negatif ou superieur au stock");
 				}
 			}
 			
@@ -67,7 +98,8 @@ public class Commande {
 		this.calculerPrixTotal();
 	}
 
-//supp des produits + modification de prix total	
+//supp des produits + modification de prix total
+//cette mÃ©thode supprime totalement un produt choisi
 	public void suppProduitTotalr(Produit p) {
 		this.produits.remove(p);
 		this.calculerPrixTotal();
@@ -135,17 +167,12 @@ public class Commande {
 
 	@Override
 	public String toString() {
-		return "Commande [id=" + id + ", client=" + client + ", employe=" + employe + ", magasin=" + magasin
-				+ ", prixTotal=" + prixTotal + ", dateCommande=" + dateCommande + ", modePaiement=" + modePaiement
-				+ ", produits=" + produits + "]";
+		return "la Commande numero : " + id +"\n" + "Client : " + client +"\n" + "Employe : " + employe +"\n" + "Magasin : " + magasin
+				+"\n" + "Le prixTotal est de " + prixTotal +"euros \n" + "La date de commande est le : " + dateCommande +"\n" + "Le mode de paiement : " + modePaiement
+				+"\n" + "L'ensemble de produits de cette commandes est : " + produits + "]";
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Commande [id=" + id + ", client=" + client + ", employe=" + employe + ", magasin=" + magasin
-//				+ ", prixTotal=" + prixTotal + ", dateCommande=" + dateCommande + ", modePaiement=" + modePaiement
-//				+ "]";
-//	}
+
 	
 	
 }
