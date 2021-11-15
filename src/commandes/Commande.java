@@ -31,7 +31,7 @@ public class Commande {
 	}
 
 	
-//calculer prix total
+//calculer prix total de la compmande courante
 	public void calculerPrixTotal() {
 		double prixT = 0;
 		for (Map.Entry<Produit, Integer>  m : this.getProduits().entrySet()) {
@@ -49,7 +49,7 @@ public class Commande {
 		this.calculerPrixTotal();
 	}
 	
-//supp des produits + modification de prix total	
+//supp des unitÃ©s de produits + modification de prix total
 	public void suppProduit(Produit p, int quantite) {
 		for (Map.Entry<Produit, Integer> m : this.getProduits().entrySet()) {
 			if(m.getKey().equals(p)){
@@ -58,7 +58,7 @@ public class Commande {
 					m.setValue((int) m.getValue() - quantite);
 				}
 				else {
-					System.out.println("Le nombre de produits choisi est négatif ou supérieur au stock");
+					System.out.println("Le nombre de produits choisi est nï¿½gatif ou supï¿½rieur au stock");
 				}
 			}
 			
@@ -67,7 +67,8 @@ public class Commande {
 		this.calculerPrixTotal();
 	}
 
-//supp des produits + modification de prix total	
+//supp des produits + modification de prix total
+//cette mÃ©thode supprime totalement un produt choisi
 	public void suppProduitTotalr(Produit p) {
 		this.produits.remove(p);
 		this.calculerPrixTotal();
@@ -135,17 +136,12 @@ public class Commande {
 
 	@Override
 	public String toString() {
-		return "Commande [id=" + id + ", client=" + client + ", employe=" + employe + ", magasin=" + magasin
-				+ ", prixTotal=" + prixTotal + ", dateCommande=" + dateCommande + ", modePaiement=" + modePaiement
-				+ ", produits=" + produits + "]";
+		return "la Commande numero : " + id +"\n" + "Client : " + client +"\n" + "Employe : " + employe +"\n" + "Magasin : " + magasin
+				+"\n" + "Le prixTotal est de " + prixTotal +"euros \n" + "La date de commande est le : " + dateCommande +"\n" + "Le mode de paiement : " + modePaiement
+				+"\n" + "L'ensemble de produits de cette commandes est : " + produits + "]";
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Commande [id=" + id + ", client=" + client + ", employe=" + employe + ", magasin=" + magasin
-//				+ ", prixTotal=" + prixTotal + ", dateCommande=" + dateCommande + ", modePaiement=" + modePaiement
-//				+ "]";
-//	}
+
 	
 	
 }
