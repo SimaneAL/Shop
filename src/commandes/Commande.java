@@ -1,12 +1,13 @@
 package commandes;
 
-import java.sql.Date;
-import java.util.HashMap;
-import java.util.Map;
 import magasins.Magasin;
 import personnes.Client;
 import personnes.Employe;
 import rayons.Produit;
+
+import java.sql.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Commande {
 	private int id;
@@ -19,9 +20,9 @@ public class Commande {
 	//private Date date;
 	private ModePaiement modePaiement;
 	private Map<Produit, Integer> produits;
-	
-	
-	
+
+
+
 	public Commande(Client client, Employe employe, Magasin magasin, ModePaiement modePaiement) {
 		super();
 		this.client = client;
@@ -33,26 +34,26 @@ public class Commande {
 		this.produits = new HashMap<Produit, Integer>();
 	}
 
-	
-//calculer prix total
+
+	//calculer prix total
 	public void calculerPrixTotal() {
 		double prixT = 0;
 		for (Map.Entry<Produit, Integer>  m : this.getProduits().entrySet()) {
-			
-	            prixT = prixT+  ((Produit) m.getKey()).getPrixUnite() *  (int) m.getValue() ;
-	           //System.out.println((int) m.getValue());
-	           //System.out.println("hum" +this.getPrixTotal() + (int) ((Produit) m.getKey()).getPrixUnite() * (int) m.getValue() );
+
+			prixT = prixT+  ((Produit) m.getKey()).getPrixUnite() *  (int) m.getValue() ;
+			//System.out.println((int) m.getValue());
+			//System.out.println("hum" +this.getPrixTotal() + (int) ((Produit) m.getKey()).getPrixUnite() * (int) m.getValue() );
 		}
 		this.setPrixTotal(prixT);
 	}
-	
-//ajouter des produits + modification de prix total
+
+	//ajouter des produits + modification de prix total
 	public void ajoutProduit(Produit p, int quantite) {
 		this.produits.put(p, quantite);
 		this.calculerPrixTotal();
 	}
-	
-//supp des produits + modification de prix total	
+
+	//supp des produits + modification de prix total
 	public void suppProduit(Produit p, int quantite) {
 		for (Map.Entry<Produit, Integer> m : this.getProduits().entrySet()) {
 			if(m.getKey().equals(p)){
@@ -64,18 +65,18 @@ public class Commande {
 					System.out.println("Le nombre de produits choisi est n�gatif ou sup�rieur au stock");
 				}
 			}
-			
-        }
-		
+
+		}
+
 		this.calculerPrixTotal();
 	}
 
-//supp des produits + modification de prix total	
+	//supp des produits + modification de prix total
 	public void suppProduitTotalr(Produit p) {
 		this.produits.remove(p);
 		this.calculerPrixTotal();
 	}
-	
+
 	public Map<Produit, Integer> getProduits() {
 		return produits;
 	}
@@ -149,6 +150,6 @@ public class Commande {
 //				+ ", prixTotal=" + prixTotal + ", dateCommande=" + dateCommande + ", modePaiement=" + modePaiement
 //				+ "]";
 //	}
-	
-	
+
+
 }

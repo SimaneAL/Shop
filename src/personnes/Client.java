@@ -2,9 +2,9 @@ package personnes;
 
 public class Client extends Personne {
 
-	public Client(String nom, String prenom, String adresse, String dateNaissance, int codePostal) {
+	public Client(String nom, String prenom, String adresse, String dateNaissance, String codePostal) {
 		super(nom, prenom, adresse, dateNaissance, codePostal);
-		
+
 	}
 
 
@@ -16,9 +16,9 @@ public class Client extends Personne {
 				+ ", DateNaissance=" + getDateNaissance() + ", CodePostal=" + getCodePostal()
 				+ "]";
 	}
-	
-	
 
-	
-	
+
+
+
+
 }

@@ -2,10 +2,10 @@ package personnes;
 
 public class Personne {
 	private String nom, prenom, adresse, dateNaissance;
-	private int codePostal;
+	private String codePostal;
 	
 	
-	public Personne(String nom, String prenom, String adresse, String dateNaissance, Integer codePostal) {
+	public Personne(String nom, String prenom, String adresse, String dateNaissance, String codePostal) {
 		try{
 			this.nom = nom;
 			this.prenom = prenom;
@@ -59,12 +59,12 @@ public class Personne {
 	}
 
 
-	public int getCodePostal() {
+	public String getCodePostal() {
 		return codePostal;
 	}
 
 
-	public void setCodePostal(int codePostal) {
+	public void setCodePostal(String codePostal) {
 		this.codePostal = codePostal;
 	}
 
