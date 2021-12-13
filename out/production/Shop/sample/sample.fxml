@@ -290,7 +290,7 @@
                                     <Image url="@../pics/sweat.jpeg" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="21.0" prefWidth="107.0" text="Sweat : 40,00 euros">
+                              <Label prefHeight="21.0" prefWidth="141.0" text="Sweat : 40,00 euros">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -300,7 +300,7 @@
                               </Label>
                               <Label fx:id="labelnbrSWEAT" text="0">
                                  <HBox.margin>
-                                    <Insets left="310.0" top="15.0" />
+                                    <Insets left="257.0" top="15.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
@@ -316,14 +316,14 @@
                                  </image>
                               </ImageView>
                               <Label />
-                              <Label text="Switch">
+                              <Label text="Switch : 339,0 euros">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
                               <Label fx:id="labelnbrSWITCH" text="0">
                                  <HBox.margin>
-                                    <Insets left="305.0" top="15.0" />
+                                    <Insets left="240.0" top="15.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
@@ -339,7 +339,7 @@
                                  </image>
                               </ImageView>
                               <Label />
-                              <Label text="Livre Java pour les nulls">
+                              <Label text="Livre Java pour les null : 25 euros">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -349,7 +349,7 @@
                               </Label>
                               <Label fx:id="labelnbrJAVA" text="0">
                                  <HBox.margin>
-                                    <Insets left="190.0" top="15.0" />
+                                    <Insets left="150.0" top="15.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
@@ -365,7 +365,7 @@
                                  </image>
                               </ImageView>
                               <Label />
-                              <Label text="Livre : Apprendre JavaFX">
+                              <Label text="Livre : Apprendre JavaFX : 25 euros">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -375,7 +375,7 @@
                               </Label>
                               <Label fx:id="labelnbrFX" text="0">
                                  <HBox.margin>
-                                    <Insets left="185.0" top="15.0" />
+                                    <Insets left="140.0" top="15.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
@@ -391,7 +391,7 @@
                                  </image>
                               </ImageView>
                               <Label />
-                              <Label text="Livre : SQL">
+                              <Label text="Livre SQL : 20 euros">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -401,7 +401,7 @@
                               </Label>
                               <Label fx:id="labelnbrSQL" text="0">
                                  <HBox.margin>
-                                    <Insets left="270.0" top="15.0" />
+                                    <Insets left="235.0" top="15.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
@@ -427,7 +427,7 @@
                               </Label>
                               <Label fx:id="labelnbrGRAPHE" text="0">
                                  <HBox.margin>
-                                    <Insets left="115.0" top="15.0" />
+                                    <Insets left="140.0" top="15.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
@@ -716,62 +716,138 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="55.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="55.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterSweat" prefHeight="23.0" prefWidth="117.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppSweat" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#ajouterSwitch" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterJava" prefHeight="23.0" prefWidth="78.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterJava" prefHeight="23.0" prefWidth="78.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterFX" prefHeight="23.0" prefWidth="92.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterFX" prefHeight="23.0" prefWidth="92.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="22.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="22.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterSQL" prefHeight="23.0" prefWidth="85.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterSQL" prefHeight="23.0" prefWidth="85.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#shopNow" prefHeight="23.0" prefWidth="81.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#shopNow" prefHeight="23.0" prefWidth="81.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="22.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="22.0" />
+                              <Insets top="33.0" />
                            </VBox.margin>
-                        </Button>
+                        </HBox>
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
