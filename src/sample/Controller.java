@@ -78,6 +78,33 @@ public class Controller implements Initializable {
     @FXML
     private RadioButton paiementCB;
 
+
+    @FXML
+    private Label labelnbrSWITCH;
+
+    @FXML
+    private Label labelnbrFX;
+
+    @FXML
+    private Label labelnbrSWEAT;
+
+    @FXML
+    private Label labelnbrJAVA;
+
+    @FXML
+    private Label labelnbrSQL;
+
+    @FXML
+    private Label labelnbrGRAPHE;
+
+
+    @FXML
+    private Label labelnbrps5;
+
+    @FXML
+    private Label labelMagasin;
+
+
     private Magasin m = new Magasin("Daphine Shop", "PLace du Marechal de Lattre de Tassigny, 75016 PARIS");
 
 
@@ -130,10 +157,64 @@ public class Controller implements Initializable {
         p1 = new Produit("switch", 45);
         p2 = new Produit("livre", 3);
 
-        m.ajouterprod(p);
-        m.ajouterprod(p1);
-        m.ajouterprod(p2);
+        m.ajouterprod(p, 10);
+        m.ajouterprod(p1, 5);
+        m.ajouterprod(p2, 1);
 
     }
 
+    @FXML
+    void ajouterPS5(ActionEvent event) {
+        this.labelnbrps5.setText(String.valueOf(Integer.parseInt(this.labelnbrps5.getText())+1));
+    }
+
+    @FXML
+    void ajouterSweat(ActionEvent event) {
+        this.labelnbrSWEAT.setText(String.valueOf(Integer.parseInt(this.labelnbrSWEAT.getText())+1));
+    }
+
+    @FXML
+    void ajouterSwitch(ActionEvent event) {
+        this.labelnbrSWITCH.setText(String.valueOf(Integer.parseInt(this.labelnbrSWITCH.getText())+1));
+    }
+
+    @FXML
+    void ajouterJava(ActionEvent event) {
+        this.labelnbrJAVA.setText(String.valueOf(Integer.parseInt(this.labelnbrJAVA.getText())+1));
+    }
+
+    @FXML
+    void ajouterFX(ActionEvent event) {
+        this.labelnbrFX.setText(String.valueOf(Integer.parseInt(this.labelnbrFX.getText())+1));
+
+    }
+
+    @FXML
+    void ajouterSQL(ActionEvent event) {
+        this.labelnbrSQL.setText(String.valueOf(Integer.parseInt(this.labelnbrSQL.getText())+1));
+
+    }
+
+    @FXML
+    void ajouterGraphes(ActionEvent event) {
+        this.labelnbrGRAPHE.setText(String.valueOf(Integer.parseInt(this.labelnbrGRAPHE.getText())+1));
+    }
+
+
+    @FXML
+    void suppPS5(ActionEvent event) {
+
+    }
+
+
+
+    @FXML
+    void suppSweat(ActionEvent event) {
+
+    }
+
+    @FXML
+    void passerCommande(ActionEvent event) {
+
+    }
 }

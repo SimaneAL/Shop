@@ -11,8 +11,8 @@ import java.util.*;
 
 public class Magasin {
 	private String nom, adresse;
-	private List<Personne> personnes;
-	private List<Produit> produits;
+	private Set<Personne> personnes;
+	private Map<Produit, Integer> produits;
 	private int id;
 	private static int incr;
 
@@ -22,13 +22,23 @@ public class Magasin {
 		incr++;
 		this.nom = nom;
 		this.adresse = adresse;
-		this.personnes = new ArrayList<Personne>();
-		this.produits = new ArrayList<Produit>();
+		this.personnes = new HashSet<Personne>();
+		this.produits = new HashMap<Produit, Integer>();
 	}
 
-	public void ajouterprod(Produit p){
+	public void ajouterprod(Produit p, int quantite){
 		if(p!= null){
-			this.produits.add(p);
+			if(!this.produits.containsKey(p)){
+				this.produits.put(p, quantite);
+			}
+			else {
+				for (Map.Entry<Produit, Integer>  m : this.getProduits().entrySet()) {
+					if(m.getKey().equals(p)){
+						m.setValue(m.getValue() + quantite);
+					}
+				}
+			}
+
 		}
 	}
 
@@ -52,22 +62,22 @@ public class Magasin {
 	}
 
 
-	public List<Personne> getPersonnes() {
+	public Set<Personne> getPersonnes() {
 		return personnes;
 	}
 
 
-	public void setPersonnes(List<Personne> personnes) {
+	public void setPersonnes(Set<Personne> personnes) {
 		this.personnes = personnes;
 	}
 
 
-	public List<Produit> getProduits() {
+	public Map<Produit, Integer> getProduits() {
 		return produits;
 	}
 
 
-	public void setProduits(List<Produit> produits) {
+	public void setProduits(Map<Produit, Integer> produits) {
 		this.produits = produits;
 	}
 
@@ -82,10 +92,10 @@ public class Magasin {
 
 
 	public Produit quelProduit(String id){
-		for (Produit p : this.getProduits()) { //parcourir tous les produits du magasin afin de trouver le
+		for (Map.Entry<Produit, Integer> p : this.getProduits().entrySet()) { //parcourir tous les produits du magasin afin de trouver le
 			// produit choisi
-			if(p.getId() == Integer.parseInt(id) || p.getNom().equals(id)){
-				return p;
+			if(p.getKey().getId() == Integer.parseInt(id) || p.getKey().getNom().equals(id)){
+				return p.getKey();
 			}
 		}
 		return null;
@@ -209,9 +219,9 @@ public class Magasin {
 		p1 = new Produit("switch", 45);
 		p2 = new Produit("livre", 3);
 
-		this.ajouterprod(p);
-		this.ajouterprod(p1);
-		this.ajouterprod(p2);
+		this.ajouterprod(p, 5);
+		this.ajouterprod(p1, 1);
+		this.ajouterprod(p2, 10);
 
 
 		System.out.println("1 : acheter un produit \n 2: supprimer une quantite d un produit " +
