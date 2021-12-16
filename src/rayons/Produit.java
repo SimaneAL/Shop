@@ -6,7 +6,7 @@ public  class Produit {
 	private static int incr=1;
 	private String nom;
 	private double prixUnite;
-	
+	private String details;
 	public Produit(String nom, double prixUnite) {
 
 		this.nom = nom;
@@ -31,13 +31,30 @@ public  class Produit {
 		return prixUnite;
 	}
 
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
+	}
+
 	public void setPrixUnite(double prixUnite) {
 		this.prixUnite = prixUnite;
 	}
 
 	@Override
 	public String toString() {
-		return "Produit [id=" + id + ", nom=" + nom + ", prixUnite=" + prixUnite + "]";
+		return "Produit{" +
+				"\n id=" + id +
+				"\n , nom='" + nom + '\'' +
+				"\n , prixUnite=" + prixUnite +
+				"\n , details=" + details +
+				'}';
 	}
 
 	@Override
@@ -61,7 +78,6 @@ public  class Produit {
 			return false;
 		return true;
 	}
-//
-//	@Override
-//	public abstract String toString();
+
+
 }

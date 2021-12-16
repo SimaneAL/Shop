@@ -5,7 +5,9 @@ import personnes.Client;
 import personnes.Employe;
 import rayons.Produit;
 
-import java.sql.Date;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +18,8 @@ public class Commande {
 	private Employe employe;
 	private Magasin magasin;
 	private double prixTotal = 0.0;
-	private String dateCommande;
+	private Date dateCommande;
+	private DateFormat dateFormat;
 	//private Date date;
 	private ModePaiement modePaiement;
 	private Map<Produit, Integer> produits;
@@ -29,7 +32,9 @@ public class Commande {
 		this.employe = employe;
 		this.magasin = magasin;
 		//ate = (Date) new java.util.Date();
-		this.dateCommande = Date.class.toString();
+        dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+		this.dateCommande = new Date();
 		this.modePaiement = modePaiement;
 		this.produits = new HashMap<Produit, Integer>();
 	}
@@ -118,12 +123,9 @@ public class Commande {
 	}
 
 	public String getDateCommande() {
-		return dateCommande;
+		return dateFormat.format(this.dateCommande);
 	}
 
-	public void setDateCommande(String dateCommande) {
-		this.dateCommande = dateCommande;
-	}
 
 	public ModePaiement getModePaiement() {
 		return modePaiement;
