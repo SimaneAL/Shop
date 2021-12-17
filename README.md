@@ -26,6 +26,7 @@ Important !
 >
 ![Capture3](src/pics/junit.PNG)
 >Ensuite vous cliquez sur le boutton FIX en dessous de JUnit5
+>
 ![Capture3](src/pics/ju.PNG)
 Voilà, il n'y a plus qu'une seule chose à faire, démarrer le programme en exécutant la classe MainBis
 
