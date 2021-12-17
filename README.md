@@ -1,6 +1,6 @@
 # MagasinJavaS5
- un projet de java réalisé par Simane AIT LAHCEN, Maxime BOURDON
- et Loïc Etienne
+ Uun projet de java réalisé par Simane AIT LAHCEN, Maxime BOURDON
+ et Loïc Etienne. Des étudiants de Paris Dauphine PSL
 ## Shop DAUPHINE : Programme en Java et interface en JavaFX  🌎 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
 >> Il s'agit d'un magasin qui vend des produits aléatoires dans lequel le client pourra interagir avec une interface graphique faite en JavaFX 
