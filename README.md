@@ -19,8 +19,8 @@ truc
 
 Afin de pouvoir utiliser le JavaFX *********
 
-![Capture1](https://user-images.githubusercontent.com/71081511/115720224-2449fc00-a37d-11eb-8995-a79adbed8bcb.PNG)
-![Capture2](https://user-images.githubusercontent.com/71081511/115720234-2744ec80-a37d-11eb-90f4-dd4024198085.PNG)
+![Capture1]()
+![Capture2]()
 Important ! 
 >> Si vous n'avez jamais utilisé Junit sur Intellij vous devez suivre les étapes suivantes :
 >
