@@ -1,0 +1,5 @@
+Produit{
+ id=2
+ , nom='Sweat'
+ , prixUnite=40.0
+ , details=Sweat de la promo 3e annee licence informatique MIAGEa 40 euros}

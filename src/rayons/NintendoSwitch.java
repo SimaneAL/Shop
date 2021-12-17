@@ -1,9 +1,8 @@
 package rayons;
 
-import javafx.scene.text.Text;
 
-public class Switch extends Produit {
-    public Switch() {
+public class NintendoSwitch extends Produit {
+    public NintendoSwitch() {
         super("Switch", 339.0);
         super.setDetails("La Nintendo Switch (ニンテンドースイッチ, Nintendō Suitchi?) est une console \n " +
                 "de jeux vidéo produite par Nintendo, succédant à la Wii U. Il s'agit de la première console \n" +
