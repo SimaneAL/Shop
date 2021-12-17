@@ -40,4 +40,4 @@ https://github.com/SimaneAL/Shop/tree/Simane_dev/src/sample
 
 
 ### 1. Diagramme de classe :
-![Capture](src/pics/Produit.PNG)
+![Capture](src/pics/Produit.png)
