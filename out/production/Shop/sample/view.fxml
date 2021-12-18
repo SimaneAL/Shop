@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <tabs>
+        <Tab text="Acceuil">
+            <content>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: 15; -fx-translate-x: 10;">
+                            <image>
+                                <Image url="@../pics/Dauphine_Bleu.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="87.0" prefWidth="252.0" style="-fx-border-color: white; -fx-border-width: 5; -fx-background-color: #191970;" text="Shop Paris DAUPHINE PSL" textFill="WHITE">
+                            <font>
+                                <Font name="Verdana" size="12.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets left="240.0" right="80.0" top="50.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="-Bienvenue dans notre magasin créé lors s'un projet Java du S5.">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="10.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Verdana" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label text="-L'onglet &quot;Shop&quot; est dédié  pour nos clients afin qu'ils puissenteffectuer leurs achats dans notre magasin DAUPHINE PSL.">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Verdana" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label text="-L'onglet &quot;Manager&quot; est dédié pour notre personnel afin qu'il puisse gérer notre stock de magasin.">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Verdana" size="12.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #191970;">
+                            <children>
+                                <VBox prefHeight="175.0" prefWidth="425.0">
+                                    <children>
+                                        <HBox prefHeight="100.0" prefWidth="100.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="120.0" text="Nom">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="nom" prefHeight="25.0" prefWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets bottom="10.0" right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefWidth="120.0" text="Prenom">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="prenom" prefHeight="25.0" prefWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefWidth="120.0" text="Date de naissance">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="dateNaiss" prefHeight="25.0" prefWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefWidth="120.0" text="Adresse">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="adresse" prefHeight="25.0" prefWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="120.0" text="Code postal">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="codePostal" prefHeight="25.0" prefWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana" size="12.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label text="Mode de paiement ">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Verdana Pro" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <RadioButton fx:id="paiementCB" mnemonicParsing="false" text="CB">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                </RadioButton>
+                                                <RadioButton fx:id="paiementEspece" mnemonicParsing="false" text="Espece">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                </RadioButton>
+                                                <RadioButton fx:id="paiementCheque" mnemonicParsing="false" text="Chèque">
+                                                    <HBox.margin>
+                                                        <Insets right="10.0" />
+                                                    </HBox.margin>
+                                                </RadioButton>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <Label fx:id="textInfo" prefHeight="174.0" prefWidth="495.0">
+                                    <font>
+                                        <Font name="Verdana" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#shopNow" style="-fx-background-color: #191970;" text="Shop now " textAlignment="JUSTIFY" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets left="320.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Verdana" size="12.0" />
+                            </font>
+                        </Button>
+                        <Label text="By AIT LAHCEN Simane, ETIENNE Loic, BOURDON Maxime">
+                            <VBox.margin>
+                                <Insets bottom="50.0" left="200.0" right="50.0" top="150.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Verdana" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </content>
+        </Tab>
+        <Tab text="Shop">
+            <content>
+                <HBox>
+                    <children>
+                        <VBox prefHeight="445.0" prefWidth="470.0">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: 15; -fx-translate-x: 10;">
+                                    <image>
+                                        <Image url="@../pics/Dauphine_Bleu.png" />
+                                    </image>
+                                </ImageView>
+                                <HBox prefHeight="40.0" prefWidth="740.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                            <image>
+                                                <Image url="@../pics/ps5.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label prefHeight="50.0" prefWidth="148.0" text="PS5 : 455,45 euros" textAlignment="CENTER">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="labelnbrps5" prefHeight="34.0" prefWidth="52.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="193.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="40.0" prefWidth="740.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pics/sweat.jpeg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label prefHeight="21.0" prefWidth="141.0" text="Sweat : 40,00 euros">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="35.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="labelnbrSWEAT" prefHeight="17.0" prefWidth="52.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="200.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="40.0" prefWidth="740.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pics/switch.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label />
+                                        <Label text="Switch : 339,0 euros">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets top="5.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="labelnbrSWITCH" prefHeight="17.0" prefWidth="41.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="204.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="40.0" prefWidth="740.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pics/java_nuls.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label />
+                                        <Label prefHeight="21.0" prefWidth="241.0" text="Livre Java pour les null : 35 euros">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="40.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="labelnbrJAVA" prefHeight="17.0" prefWidth="41.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="93.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="40.0" prefWidth="750.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pics/javaFX.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label />
+                                        <Label prefHeight="21.0" prefWidth="269.0" text="Livre &quot;Apprendre JavaFX&quot; : 35 euros">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="45.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="labelnbrFX" prefWidth="52.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="70.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="41.0" prefWidth="750.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pics/SQL.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label />
+                                        <Label prefHeight="21.0" prefWidth="192.0" text="Livre SQL : 35 euros">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="40.0" top="9.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="labelnbrSQL" prefWidth="52.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="150.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="40.0" prefWidth="750.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pics/graphes.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Label />
+                                        <Label prefHeight="21.0" prefWidth="327.0" text="Livre : Algorithme dans les graphes : 35 euros">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="55.0" top="9.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="labelnbrGRAPHE" prefWidth="52.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="10.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <Pane prefHeight="200.0" prefWidth="500.0">
+                                    <children>
+                                        <HBox prefHeight="100.0" prefWidth="700.0">
+                                            <children>
+                                                <VBox prefHeight="227.0" prefWidth="275.0">
+                                                    <children>
+                                                        <Label style="-fx-border-color: #191970;" text="Infos personnelles">
+                                                            <padding>
+                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                            </padding>
+                                                            <VBox.margin>
+                                                                <Insets bottom="5.0" left="100.0" top="5.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font name="Verdana Pro" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <HBox prefHeight="100.0" prefWidth="100.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Nom :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelNom" prefHeight="17.0" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefWidth="130.0" text="Prenom :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelPrenom" prefHeight="17.0" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Date de naissance :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelDateNaiss" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Adresse :">
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelAdresse" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Code postal : ">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelCodePostal" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                    </children>
+                                                    <HBox.margin>
+                                                        <Insets right="20.0" />
+                                                    </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="227.0" prefWidth="353.0">
+                                                    <children>
+                                          <HBox>
+                                             <children>
+                                                              <Label style="-fx-border-color: #191970;" text="Votre panier (infos commande)  :">
+                                                                  <padding>
+                                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                  </padding>
+                                                                  <VBox.margin>
+                                                                      <Insets bottom="10.0" left="100.0" />
+                                                                  </VBox.margin>
+                                                                  <font>
+                                                                      <Font name="Verdana" size="12.0" />
+                                                                  </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                              </Label>
+                                                <Button mnemonicParsing="false" onAction="#ticketDeCaisse" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: #191970;" text="Ticket" textAlignment="JUSTIFY" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Verdana" size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="100.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Num de commande :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelNumCom" prefHeight="17.0" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefWidth="130.0" text="Caissier :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelCaissier" prefHeight="17.0" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefWidth="130.0" text="Magasin :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelMagasin" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Date de commande :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelDtaeCom" prefHeight="15.0" prefWidth="214.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Mode de paiement :">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelModePai" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label prefHeight="17.0" prefWidth="130.0" text="Prix Total : ">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelPrixTital" prefWidth="130.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                    <font>
+                                                                        <Font name="Verdana" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </Pane>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="651.0" prefWidth="135.0">
+                            <children>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="55.0" />
+                                            </VBox.margin>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterPS5" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#afficherDetailsPs5" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="33.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppSweat" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                            </VBox.margin>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterSweat" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                              <Button mnemonicParsing="false" onAction="#afficherDetailsSweat" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="33.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppSwitch" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterSwitch" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                              <Button mnemonicParsing="false" onAction="#afficherDetailsSwitch" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="33.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppJava" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterJava" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                              <Button mnemonicParsing="false" onAction="#afficherDetailsJava" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="33.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppFX" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="22.0" />
+                                            </VBox.margin>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterFX" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                              <Button mnemonicParsing="false" onAction="#afficherDetailsFX" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppSQL" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterSQL" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                              <Button mnemonicParsing="false" onAction="#afficherDetailsSQL" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="30.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox>
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#suppGraphe" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="-" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="22.0" />
+                                            </VBox.margin>
+                                            <HBox.margin>
+                                                <Insets right="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterGraphes" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #191970;" text="+" textAlignment="JUSTIFY" textFill="WHITE">
+                                            <font>
+                                                <Font name="Verdana" size="12.0" />
+                                            </font>
+                                        </Button>
+                              <Button mnemonicParsing="false" onAction="#afficherDetailsGraphes" prefHeight="23.0" prefWidth="38.0" style="-fx-background-color: #191970;" text="D" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="33.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                            <HBox.margin>
+                                <Insets bottom="260.0" top="20.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="671.0" prefWidth="325.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#passerCommande" prefHeight="23.0" prefWidth="82.0" style="-fx-background-color: #191970;" text="Shop now " textAlignment="JUSTIFY" textFill="WHITE">
+                                    <font>
+                                        <Font name="Verdana" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="120.0" right="10.0" top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <Label fx:id="textInfoShop" prefHeight="324.0" prefWidth="295.0">
+                                    <font>
+                                        <Font name="Verdana" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="20.0" right="10.0" top="50.0" />
+                                    </VBox.margin>
+                                </Label>
+                        <Label fx:id="textInfoTicket" prefHeight="324.0" prefWidth="295.0">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </content>
+        </Tab>
+      <Tab text="Personnel">
+         <content>
+            <HBox>
+               <children>
+                  <VBox prefHeight="445.0" prefWidth="470.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: 15; -fx-translate-x: 10;">
+                           <image>
+                              <Image url="@../pics/Dauphine_Bleu.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="104.0" prefWidth="524.0">
+                           <children>
+                              <ImageView fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pics/userF.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <VBox prefHeight="104.0" prefWidth="383.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="385.0" text="NOM, Prénom : AIT LAHCEN, Simane" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="233.0" text="les gains de productivité" />
+                                          <Label fx:id="salaireSimane" prefHeight="34.0" prefWidth="304.0" text="0">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="104.0" prefWidth="524.0">
+                           <children>
+                              <ImageView fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pics/userM.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <VBox prefHeight="104.0" prefWidth="383.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="385.0" text="NOM, Prénom : BOURDON, Maxime" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="230.0" text="les gains de productivité" />
+                                          <Label fx:id="salaireMaxime" prefHeight="34.0" prefWidth="304.0" text="0">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="104.0" prefWidth="524.0">
+                           <children>
+                              <ImageView fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pics/userM.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <VBox prefHeight="104.0" prefWidth="383.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="385.0" text="NOM, Prénom : ETIENNE, Loïc" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="233.0" text="les gains de productivité" />
+                                          <Label fx:id="salaireLoic" prefHeight="34.0" prefWidth="304.0" text="0">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>
