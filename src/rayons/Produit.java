@@ -49,16 +49,13 @@ public  class Produit {
 
 	@Override
 	public String toString() {
-		return "Produit{" +
-				"\n id=" + id +
-				"\n , nom='" + nom + '\'' +
-				"\n , prixUnite=" + prixUnite +
-				"\n , details=" + details +
-				'}';
+		return nom +
+				"\n	->PrixUnite : " + prixUnite +
+				"\n	->Details : " + details;
 	}
 
 	@Override
-	public int hashCode() {
+	 public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + id;

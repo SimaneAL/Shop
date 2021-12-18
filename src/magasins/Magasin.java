@@ -2,30 +2,133 @@ package magasins;
 
 import commandes.Commande;
 import commandes.ModePaiement;
+import contrat.CDD;
+import contrat.CDI;
+import contrat.Contrat;
+import contrat.Stage;
 import personnes.Client;
 import personnes.Employe;
 import personnes.Personne;
-import rayons.Produit;
+import rayons.*;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class Magasin {
 	private String nom, adresse;
-	private Set<Personne> personnes;
+	private ArrayList<Personne> personnes;
 	private Map<Produit, Integer> produits;
 	private int id;
 	private static int incr;
 
+	//les 3 types de contrat de ce magasin
+	private static Contrat cdd;
+	private static Contrat stage ;
+	private static Contrat cdi ;
 
+	//les principaux produits de notre magasin
+	private Produit ps5, sweat, nintendoSwitch, livreJAVA, livreFX, livreSQL, livreGRAPHES;
+
+	//construteur
 	public Magasin(String nom, String adresse) {
 		this.id = incr;
 		incr++;
 		this.nom = nom;
 		this.adresse = adresse;
-		this.personnes = new HashSet<Personne>();
+		this.personnes = new ArrayList<Personne>();
 		this.produits = new HashMap<Produit, Integer>();
+		cdd = new CDD();
+		stage = new Stage();
+		cdi = new CDI();
+		this.ps5 = new PS5();
+		this.sweat = new Sweat();
+		this.nintendoSwitch = new NintendoSwitch();
+		this.livreJAVA = new Livre("Idéal pour commencer avec Java comme premier langage !\n" +
+				"\n" +
+				"Grâce à ce livre, vous allez rapidement écrire rapidement vos premières \n" +
+				" applets Java, sans pour autant devenir un gourou de la programmation objet. \n" +
+				"Rassurez-vous, on ne vous assommera pas avec toutes les subtilités du langage Java, \n" +
+				"mais vous posséderez rapidement les bases nécessaires pour utiliser la panoplie d'outils\n" +
+				" du parfait programmeur Java.\n" +
+				"Cette nouvelle édition a été entirement mise à jour avec les spécifications de la \n" +
+				" dernière version du SDK Java. Intègre les nouveautés apportées par Java 8.");
+		this.livreFX = new Livre("JavaFX est une plate-forme logicielle permettant de \n" +
+				"créer et de fournir des applications de bureau,\n" +
+				"ainsi que des applications Internet riches (RIA) pouvant fonctionner sur une grande variété de\n" +
+				"périphériques. JavaFX est destiné à remplacer Swing en tant que bibliothèque graphique standard\n" +
+				"pour Java SE.");
+		this.livreSQL = new Livre("Ce nouveau livre de la collection  » Pour les Nuls pros » va vous donner \n" +
+				" en quelque 400 pages toutes les connaissances qui vous permettront de maîtriser SQL et de construire \n" +
+				"des requêtes fiables et puissantes.\n" +
+				"SQL (Structured Query Language) est un langage qui permet de construire de puissantes bases de \n" +
+				"données relationnelles. Vous apprendrez toutes les techniques pour concevoir et administrer une \n" +
+				" base de données, et même à créer des bases de données Internet.");
+		this.livreGRAPHES = new Livre("Les modèles et les algorithmes de graphes se sont imposés aujourd'hui \n" +
+				"dans de nombreuses disciplines, aussi bien dans les sciences de base (physique, chimie, biologie, \n" +
+				"ciences humaines, informatique théorique et algorithmique) que dans les sciences de l'ingénieur \n" +
+				"(automatique, optimisation de systèmes, économie et recherche opérationnelle, analyse de données, \n" +
+				"ingénierie des grands réseaux de communication de type internet, etc). Cette nouvelle édition est la \n" +
+				"seule à offrir un panorama aussi complet de ces outils et de leurs plus récents développements.");
+		this.ajouterDesEmployes();
+		this.ajouterArticles();
+
 	}
 
+	//methode qui ajoute les employes dans la liste des personnes
+	public void ajouterDesEmployes(){ //les membres de ce groupe de projet
+		this.personnes.add(new Employe(cdd, "AIT LAHCEN", "Simane", "adrr", "02/12/2001", "92600"));
+		this.personnes.add(new Employe(stage, "ETIENNE", "Loic", "trucc", "15/12/2001", "94130"));
+		this.personnes.add(new Employe(cdi, "BOUR", "Maxime", "ad", "05//02/2001", "93600"));
+
+
+	}
+
+	//methode qui ectit toutes les infos d'un produit dans un fichier passe en param
+	void ecrireDansUnFichier(Produit p, File file) throws FileNotFoundException {
+		PrintWriter writer = new PrintWriter(file.getName());
+
+		if(writer.checkError()){
+			throw new FileNotFoundException(file.getName());
+		}
+		else{
+			writer.println(p.toString());
+		}
+		writer.close();
+	}
+
+	//methode qui cree le fichier dans lequel on retrouve les details d un produit
+	public void afficherDetailsProduit(Produit p) {
+		String nom = p.getNom() +"_Details.txt";
+		File file = new File("src//Details//" +nom);
+		try {
+			ecrireDansUnFichier(p, file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	//idem pour les details d une commande passee en param
+	public void ticketDeCaisse(Commande commande, Client client) {
+
+		File file = new File("src/Details/Ticket_de_Caisse.txt" );
+		try {
+			PrintWriter writer = new PrintWriter(file.getName());
+
+			if(writer.checkError()){
+				throw new FileNotFoundException(file.getName());
+			}
+			else{
+				writer.println(commande.toString());
+			}
+			writer.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	//methode qui ajoute une quantite d un produit passe en param
 	public void ajouterprod(Produit p, int quantite){
 		if(p!= null){
 			if(!this.produits.containsKey(p)){
@@ -42,55 +145,15 @@ public class Magasin {
 		}
 	}
 
-	public String getNom() {
-		return nom;
+	//methose qui ajoute tous les articles cres pour magasin dans la liste des produits
+	public void ajouterArticles(){
+		this.ajouterprod(ps5, 200);
+		this.ajouterprod(sweat, 69);
+		this.ajouterprod(nintendoSwitch, 100);
+		this.ajouterprod(livreJAVA, 5);
 	}
 
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-
-	public String getAdresse() {
-		return adresse;
-	}
-
-
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
-	}
-
-
-	public Set<Personne> getPersonnes() {
-		return personnes;
-	}
-
-
-	public void setPersonnes(Set<Personne> personnes) {
-		this.personnes = personnes;
-	}
-
-
-	public Map<Produit, Integer> getProduits() {
-		return produits;
-	}
-
-
-	public void setProduits(Map<Produit, Integer> produits) {
-		this.produits = produits;
-	}
-
-	@Override
-	public String toString() {
-		return "Le magasin : " + nom + '\'' +
-				", adresse='" + adresse + '\'' +
-				", personnes=" + personnes +
-				", produits=" + produits +
-				'}';
-	}
-
-
+	//methode qui renvoie un produit en fonction de son id
 	public Produit quelProduit(String id){
 		for (Map.Entry<Produit, Integer> p : this.getProduits().entrySet()) { //parcourir tous les produits du magasin afin de trouver le
 			// produit choisi
@@ -101,18 +164,22 @@ public class Magasin {
 		return null;
 	}
 
+	//methode qui choisi aleatoirement un caissier parmis les employes de ce magasin
 	public Employe choixAleatoirCaissier(){
 		Random r = new Random();
 		int choix = r.nextInt(3);
 
 		if(choix == 0){
-			return new Employe("AIT LAHCEN", "Simane", "adrr", "02/12/2001", "92600");
+			Employe simane = (Employe) this.getPersonnes().get(0);
+			return simane;
 		}
 		else if(choix==1){
-			return new Employe("ETIENNE", "Loic", "trucc", "15/12/2001", "94130");
+			Employe loic = (Employe) this.getPersonnes().get(1);
+			return loic;//loic
 		}
 		else{
-			return new Employe("BOUR", "Maxime", "ad", "05//02/2001", "93600");
+			Employe max = (Employe) this.getPersonnes().get(2);
+			return max; //maxime
 		}
 	}
 
@@ -143,7 +210,7 @@ public class Magasin {
 		System.out.println("Quel est votre code postal ?");
 		int code = 0;
 		try {
-			 code = sc.nextInt();
+			code = sc.nextInt();
 		}catch (InputMismatchException er){
 			System.out.println("Erreur ! Quel est votre code postal ?");
 			code = sc.nextInt();
@@ -156,117 +223,79 @@ public class Magasin {
 			dateNaiss = sc.next();
 		}
 		//if(prenom!=null && nom!=null && adresse!=null && code > 0){
-		return new Client(nom.toUpperCase(), prenom, adresse, dateNaiss, dateNaiss);
-	}
+		Client client = new Client(nom.toUpperCase(), prenom, adresse, dateNaiss, dateNaiss);
+		this.getPersonnes().add(client);
 
-	public ModePaiement choixModePaiement(){
 
-		System.out.println("Vous payez par quel mode de paiement ? \n 1 pour payer en CB \n 2 pour payer en cheque \n 3 pour payer en espece");
-		Scanner sc = new Scanner(System.in);
-		int choixUserInt= sc.nextInt();
-		while(choixUserInt<1 || choixUserInt>3){
-			System.out.println("erreur ! saissisez un mode de paiement,  \n 1 pour CB \n 2 pour cheque \n 3.  pour payer en espece\"");
-			choixUserInt= sc.nextInt();
-		}
-		if(choixUserInt==1){
-			return ModePaiement.CB;
-		}
-		if(choixUserInt==2){
-			return ModePaiement.cheque;
-		}
-		if(choixUserInt==3){
-			return ModePaiement.espece;
-		}
-		//cb par defaut
-		return ModePaiement.CB;
+		return client;
 	}
 
 
-	public Produit acheter(){
-		System.out.println("\n Vous voulez acheter quoi ? \n Le voila notre catalogue : \n"
-				+this.produits +"Saisissez l'id ou le nom du produit");
-		Scanner sc = new Scanner(System.in);
-		String nomProduit = sc.next();
+//Getters et les setters + toString()
 
-		return this.quelProduit(nomProduit);
-
+	public Produit getPs5() {
+		return ps5;
 	}
 
-
-
-
-	public void demarrerJournee(){
-		// deebut de la journee
-		System.out.println("Bonjour! Bienvenue dans notre magasin \n Nos caissiers Simane, Loic, et Maxime vous aideront à faire vos course.");
-		//choix aleatoire d un caissier
-		Employe caissier;
-		caissier = choixAleatoirCaissier();
-		System.out.println("Votre caissier associe est : " +caissier.getPrenom()+", " +caissier.getNom().toUpperCase());
-		//creation de client
-
-		Scanner sc = new Scanner(System.in);
-		Client client  = creationClient() ;
-		Commande commande = new Commande(client, caissier, this, ModePaiement.espece);//espece par defaut
-
-		//}
-
-
-
-
-
-		Produit p, p1, p2;
-		p = new Produit("ps5", 20);
-		p1 = new Produit("switch", 45);
-		p2 = new Produit("livre", 3);
-
-		this.ajouterprod(p, 5);
-		this.ajouterprod(p1, 1);
-		this.ajouterprod(p2, 10);
-
-
-		System.out.println("1 : acheter un produit \n 2: supprimer une quantite d un produit " +
-				"\n 3: supprimer totalement un produit \n 4: Afficher le prix total de votre commande et Exit");
-		int choixUs = sc.nextInt();
-		while(choixUs != 4){
-			switch(choixUs){
-				case 1 :
-					//choix mode de paiement
-					System.out.println("Bonjour! " +client.getPrenom() +", " +client.getNom() );
-					commande.setModePaiement(this.choixModePaiement());
-
-
-					System.out.println("\n Vous voulez acheter quoi ? \n Le voila notre catalogue : \n"
-							+this.produits +"Saisissez l'id ou le nom du produit");
-					String nomProduit = sc.next();
-					//System.out.println("Vous en voulez combien ?");
-					//int qtt = sc.nextInt();
-
-					commande.ajoutProduit(this.acheter(), 1);
-					break;
-				case 2 :
-					System.out.println("\n Vous voulez supprimer quoi ? \n La voila votre commande : \n"
-							+commande +"Saisissez l'id ou le nom du produit");
-					String nomPr = sc.next();
-//					System.out.println("Vous voulez supprimer cmb?");
-//					qtt = sc.nextInt();
-					commande.suppProduit(this.quelProduit(nomPr),1 );
-					break;
-
-				case 3 :
-					System.out.println("\n Vous voulez supprimer quoi ? \n La voila votre commande : \n"
-							+commande +"Saisissez l'id ou le nom du produit");
-					nomPr = sc.next();
-
-					commande.suppProduitTotalr(this.quelProduit(nomPr));
-					break;
-
-				default :
-					break;
-
-			}
-		}
-		System.out.println("Votre prix total est : " +commande.getPrixTotal()+ "\n Au revoir! ");
-
+	public Produit getSweat() {
+		return sweat;
 	}
 
+	public Produit getNintendoSwitch() {
+		return nintendoSwitch;
+	}
+
+	public Produit getLivreJAVA() {
+		return livreJAVA;
+	}
+
+	public Produit getLivreFX() {
+		return livreFX;
+	}
+
+	public Produit getLivreSQL() {
+		return livreSQL;
+	}
+
+	public Produit getLivreGRAPHES() {
+		return livreGRAPHES;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public ArrayList<Personne> getPersonnes() {
+		return personnes;
+	}
+
+	public void setPersonnes(ArrayList<Personne> personnes) {
+		this.personnes = personnes;
+	}
+
+	public Map<Produit, Integer> getProduits() {
+		return produits;
+	}
+
+	public void setProduits(Map<Produit, Integer> produits) {
+		this.produits = produits;
+	}
+
+	@Override
+	public String toString() {
+		return  nom + "\n" +
+				"-Adresse : " + adresse + "\n" ;
+	}
 }

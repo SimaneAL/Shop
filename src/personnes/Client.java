@@ -6,15 +6,10 @@ public class Client extends Personne {
 		super(nom, prenom, adresse, dateNaissance, codePostal);
 
 	}
-
-
-
-
 	@Override
 	public String toString() {
-		return "Client [Nom=" + super.getNom() + ", Prenom=" + super.getPrenom() + ", Adresse=" + getAdresse()
-				+ ", DateNaissance=" + getDateNaissance() + ", CodePostal=" + getCodePostal()
-				+ "]";
+			return "	->Nom : " + this.getNom().toUpperCase() + "\n	->Prenom : " + this.getPrenom() + "\n	->Adresse : " + getAdresse()
+				+ "\n	->DateNaissance : " + getDateNaissance() + "\n	->CodePostal : " + getCodePostal();
 	}
 
 
