@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]" date="1639848783325" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 18/12/2021 18:33 [Default]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Shop/contrat/CDD.class" />
+    <option name="AFTER_PATH" value="out/production/Shop/contrat/CDD.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]/CDD.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Shop/personnes/Employe.class" />
+    <option name="AFTER_PATH" value="out/production/Shop/personnes/Employe.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]/Employe.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Shop/contrat/Stage.class" />
+    <option name="AFTER_PATH" value="out/production/Shop/contrat/Stage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]/Stage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Shop/personnes/Client.class" />
+    <option name="AFTER_PATH" value="out/production/Shop/personnes/Client.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]/Client.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Shop/contrat/Alternance.class" />
+    <option name="AFTER_PATH" value="out/production/Shop/contrat/Alternance.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2021_18_33_[Default]/Alternance.class" />
+  </binary>
+</changelist>
