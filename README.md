@@ -50,10 +50,6 @@ Vous devriez obtenir une interface comme celle-ci :
 
 ### Setup
 
-Afin de pouvoir utiliser le JavaFX *********
-
-![Capture1]()
-![Capture2]()
 Important ! 
 > Si vous n'avez jamais utilisé Junit sur Intellij vous devez suivre les étapes suivantes :
 >
@@ -62,7 +58,7 @@ Important !
 >
 ![Capture3](src/pics/ju.PNG)
 
-Voilà, il n'y a plus qu'une seule chose à faire, démarrer le programme en exécutant la classe Main
+Voilà, il n'y a plus qu'une seule chose à faire, cliquer sur le boutton OK, et Sdémarrer le programme en exécutant la classe Main
 
 
 ### 1. Java 
