@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<TabPane prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <tabs>
         <Tab text="Acceuil">
             <content>
@@ -954,7 +954,7 @@
                                 <Insets bottom="260.0" top="20.0" />
                             </HBox.margin>
                         </VBox>
-                        <VBox prefHeight="671.0" prefWidth="325.0">
+                        <VBox prefHeight="671.0" prefWidth="393.0">
                             <children>
                                 <Button mnemonicParsing="false" onAction="#passerCommande" prefHeight="23.0" prefWidth="82.0" style="-fx-background-color: #191970;" text="Shop now " textAlignment="JUSTIFY" textFill="WHITE">
                                     <font>
@@ -964,7 +964,7 @@
                                         <Insets left="120.0" right="10.0" top="20.0" />
                                     </VBox.margin>
                                 </Button>
-                                <Label fx:id="textInfoShop" prefHeight="324.0" prefWidth="295.0">
+                                <Label fx:id="textInfoShop" prefHeight="264.0" prefWidth="378.0">
                                     <font>
                                         <Font name="Verdana" size="12.0" />
                                     </font>
@@ -972,7 +972,7 @@
                                         <Insets bottom="10.0" left="20.0" right="10.0" top="50.0" />
                                     </VBox.margin>
                                 </Label>
-                        <Label fx:id="textInfoTicket" prefHeight="324.0" prefWidth="295.0">
+                        <Label fx:id="textInfoTicket" prefHeight="294.0" prefWidth="378.0">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>
